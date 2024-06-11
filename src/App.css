@@ -106,8 +106,6 @@ form.login {
 .btn-signup,
 .btn-logout,
 .btn-aboutapp,
-.btn-review-yes,
-.btn-review-no,
 .btn-customplan {
   padding: 0.5rem 1rem;
   background-color: #aea79b;
@@ -116,7 +114,6 @@ form.login {
   font-weight: bold;
   font-family: "Rancho";
   font-size: x-large;
-  text-shadow: 0 4px 8 px #ede9da;
   transition: all 0.3s;
   margin: 20px 0;
 }
@@ -129,7 +126,7 @@ form.login {
   font-weight: bold;
   font-size: x-large;
   font-family: "Rancho";
-  text-shadow: 0 4px 8px rgb(172, 130, 148);
+
   transition: all 0.3s;
   margin: 20px 0;
   transition: background-color 0.3s, transform 0.2s;
@@ -152,15 +149,13 @@ form.login {
 .btn-logout:hover,
 .btn-signup:hover,
 .btn-aboutapp:hover,
-.btn-review-no:hover,
-.btn-review-yes:hover,
 .btn-customplan:hover {
   transform: scale(1, 1);
   background-color: #9f9a8f;
 }
 
 .bg-milky-coffee {
-  background-color: #8cbbd2;
+  background-color: #f4e1d2;
 }
 
 .logo-container {
