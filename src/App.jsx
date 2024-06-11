@@ -11,12 +11,10 @@ import AboutApp from "./components/AboutApp";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import logo from "./img/logo_new.png";
-import planParties from "./img/btn_plan.png";
-import seePlan from "./img/btn-see-plan.png";
 
-import homeBackground from "./img/question_bg.png";
+import homeBackground from "./img/landing_page_bg.png";
 import reviewBackground from "./img/Review_bg.png";
-import customPlanBackground from "./img/custom_plan_bg.png";
+import customPlanBackground from "./img/planned_bg.png";
 import loginBackground from "./img/LogIn_bg.png";
 import signupBackground from "./img/SignIn_bg.png";
 import aboutBackground from "./img/AboutApp_bg.png";
@@ -71,8 +69,6 @@ function App() {
         setUser={setUser}
         logo={logo}
         backgroundImage={backgroundImage}
-        planParties={planParties}
-        seePLan={seePlan}
       />
       <Routes>
         <Route

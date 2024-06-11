@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { ColorRing } from "react-loader-spinner";
 
 export default function Login({ setUser }) {
   const [email, setEmail] = useState("");
@@ -57,7 +58,20 @@ export default function Login({ setUser }) {
         <button>Log in</button>
         {error && <div className="error">{error}</div>}
       </form>
-      {isLoading ? <h2>Loading...</h2> : null}
+      {isLoading ? (
+        <div className="loading-spinner">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="color-ring-loading"
+            wrapperStyle={{}}
+            wrapperClass="color-ring-wrapper"
+            colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+          />
+          <h3>Loading...</h3>
+        </div>
+      ) : null}
     </div>
   );
 }

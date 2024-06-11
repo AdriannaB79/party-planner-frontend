@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { FidgetSpinner } from "react-loader-spinner";
 
 export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");
@@ -86,7 +87,19 @@ export default function Signup({ setUser }) {
         <button>Sign up</button>
         {error && <div className="error">{error}</div>}
       </form>
-      {isLoading ? <h2>Loading...</h2> : null}
+      {isLoading ? (
+        <div className="loading-spinner">
+          <FidgetSpinner
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="fidget-spinner-loading"
+            wrapperStyle={{}}
+            wrapperClass="fidget-spinner-wrapper"
+          />
+          <h3>Loading...</h3>
+        </div>
+      ) : null}
     </div>
   );
 }

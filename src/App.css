@@ -108,54 +108,71 @@ form.login {
 .btn-aboutapp,
 .btn-review-yes,
 .btn-review-no,
-.btn-customplan,
-.btn-send {
+.btn-customplan {
   padding: 0.5rem 1rem;
-  background-color: #a37c50;
+  background-color: #aea79b;
   border-radius: 9999px;
   color: #fff;
+  font-weight: bold;
+  font-family: "Rancho";
+  font-size: x-large;
+  text-shadow: 0 4px 8 px #ede9da;
   transition: all 0.3s;
   margin: 20px 0;
 }
 
-.btn-plan,
-.btn-see-plan {
-  padding: 0.5rem 1 rem;
+.btn-send {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, rgb(224, 194, 207), rgb(175, 196, 220));
   border-radius: 9999px;
+  color: navy;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Rancho";
+  text-shadow: 0 4px 8px rgb(172, 130, 148);
   transition: all 0.3s;
   margin: 20px 0;
+  transition: background-color 0.3s, transform 0.2s;
 }
-.btn-plan:hover,
-.btn-see-plan:hover {
-  transform: scale (1, 1);
+.btn-send:hover {
+  transform: scale(1, 1);
+  background: linear-gradient(45deg, rgb(187, 140, 161), rgb(134, 160, 189));
 }
 
+.btn-sent:active {
+  background: linear-gradient(45deg, rgb(126, 94, 108), rgb(79, 98, 120));
+  transform: scale(0.98);
+}
+
+.btn-sent:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(205, 163, 181);
+}
 .btn-login:hover,
 .btn-logout:hover,
 .btn-signup:hover,
 .btn-aboutapp:hover,
 .btn-review-no:hover,
 .btn-review-yes:hover,
-.btn-customplan:hover,
-.btn.btn-send:hover {
+.btn-customplan:hover {
   transform: scale(1, 1);
-  background-color: #8c6442;
+  background-color: #9f9a8f;
 }
 
 .bg-milky-coffee {
-  background-color: #d2b48c;
+  background-color: #8cbbd2;
 }
 
 .logo-container {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
+  width: 130px; /* Adjust the width as needed */
+  height: 130px; /* Adjust the height as needed */
 }
 
 .logo-image {
   width: 100%; /* Make the image fill the container */
   height: 100%; /* Make the image fill the container */
   object-fit: contain;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Maintain the aspect ratio of the image */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Maintain the aspect ratio of the image */
 }
 
 .party-planner-title {
@@ -163,7 +180,7 @@ form.login {
   font-size: 100px;
   color: black;
   text-align: center;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .aboutApp-title,
@@ -172,7 +189,7 @@ form.login {
   font-size: 70px;
   color: black;
   text-align: center;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 5px 10px rgb(0, 0, 0, 0.7);
 }
 
 .party-planner-text,
@@ -206,10 +223,12 @@ form.login {
 }
 .footer_text {
   font-family: "Rancho", serif;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   text-align: center;
   line-height: 1.5;
+  text-decoration: none;
+  text-shadow: 0 5px 10px rgb(1, 1, 110);
 }
 
 .landing_image {
@@ -240,7 +259,7 @@ form.login {
 }
 
 .background_question {
-  background-image: url("./img/question_bg.png"); /* Adjust the path if necessary */
+  background-image: url("./img/landing_page_bg.png"); /* Adjust the path if necessary */
   background-size: cover;
   background-position: center;
   padding: 20px; /* Adjust padding as needed */
@@ -271,27 +290,15 @@ form.login {
   background-repeat: no-repeat;
 }
 
-.btn_plan_parties,
-.btn_see_plan {
-  width: 150px; /* Make the image fill the container */
-  height: 150px; /* Make the image fill the container */
-  object-fit: contain;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  margin-right: 10px;
-}
-
 .flex.items-center.space-x-4 {
   display: flex;
   gap: 10px;
 }
 
 .planned_parties {
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+  background-image: url("./img/planned_bg.png");
+
+  background: radial-gradient;
   background-size: cover;
   background-position: center;
   flex-grow: 1;
@@ -328,11 +335,7 @@ form.login {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(
-    45deg,
-    rgba(238, 174, 202, 1),
-    rgba(148, 187, 233, 1)
-  );
+  background: linear-gradient(45deg, rgb(172, 130, 148), rgb(112, 146, 184));
   border: none;
   border-radius: 50px;
   text-decoration: none;
@@ -343,21 +346,13 @@ form.login {
 }
 
 .party-buttons > a:hover {
-  background: linear-gradient(
-    45deg,
-    rgba(238, 174, 202, 1),
-    rgba(148, 187, 233, 1)
-  );
+  background: linear-gradient(45deg, rgb(172, 130, 148), rgb(112, 146, 184));
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .party-buttons > a:active {
-  background: linear-gradient(
-    45deg,
-    rgba(238, 174, 202, 1),
-    rgba(148, 187, 233, 1)
-  );
+  background: linear-gradient(45deg, rgb(172, 130, 148), rgb(112, 146, 184));
   transform: scale(0.98);
 }
 
@@ -368,4 +363,10 @@ form.login {
 
 .cont {
   width: 100%;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
