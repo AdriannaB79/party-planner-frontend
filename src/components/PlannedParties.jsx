@@ -7,11 +7,14 @@ export default function PlannedParties({ user }) {
   console.log("USER IN PLANNED PARTIES", user);
   useEffect(() => {
     const fetchPlannedParties = async () => {
-      const res = await fetch("http://localhost:8080/api/parties/all-parties", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userId: user.id }),
-      });
+      const res = await fetch(
+        "https://party-planner-backend-iw93.onrender.com/api/parties/all-parties",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ userId: user.id }),
+        }
+      );
       const data = await res.json();
       console.log(data);
       setParties(data);

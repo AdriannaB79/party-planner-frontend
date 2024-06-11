@@ -58,13 +58,16 @@ const Questions = ({ user }) => {
 
   const confirmSubmit = async () => {
     setShowModal(false);
-    const res = await fetch("http://localhost:8080/api/parties", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const res = await fetch(
+      "https://party-planner-backend-iw93.onrender.com/api/parties",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
     const data = await res.json();
     console.log("SUBMITTED: ", data);
   };

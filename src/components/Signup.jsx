@@ -23,11 +23,14 @@ export default function Signup({ setUser }) {
       age,
     };
 
-    const response = await fetch("http://localhost:8080/api/users/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
+    const response = await fetch(
+      "https://party-planner-backend-iw93.onrender.com/api/users/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
+      }
+    );
 
     const data = await response.json();
 
