@@ -74,6 +74,8 @@ form.login {
   border: 2px solid black;
   background-color: rgba(179, 174, 174, 0.469);
   backdrop-filter: blur(2px);
+  font-family: "Rancho";
+  font-size: x-large;
 }
 
 .aboutApp-table {
@@ -116,6 +118,7 @@ form.login {
   font-size: x-large;
   transition: all 0.3s;
   margin: 20px 0;
+  text-wrap: nowrap;
 }
 
 .btn-send {
@@ -181,7 +184,7 @@ form.login {
 .aboutApp-title,
 .landing_title {
   font-family: "Rancho", serif;
-  font-size: 70px;
+  font-size: xxx-large;
   color: black;
   text-align: center;
   text-shadow: 0 5px 10px rgb(0, 0, 0, 0.7);
@@ -227,11 +230,19 @@ form.login {
 }
 
 .landing_image {
-  height: 100%;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  object-fit: cover;
 }
 
+.landing_image_containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
 /*
 .overlay-bg {
   position: absolute;
@@ -364,4 +375,218 @@ form.login {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .party-planner-title {
+    font-size: 70px;
+  }
+
+  .party-planner-text {
+    font-size: 30px;
+  }
+
+  .landing-image-container {
+    padding: 20px; /* Optional: Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .party-planner-title {
+    font-size: 50px;
+  }
+
+  .party-planner-text {
+    font-size: 20px;
+  }
+
+  .landing-image-container {
+    padding: 10px; /* Optional: Further adjust padding for very small screens */
+  }
+}
+.aboutApp-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.aboutApp-image-column,
+.aboutApp-content-column {
+  width: 100%;
+}
+
+.aboutApp-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aboutApp-content {
+  font-family: "Rancho", serif;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .aboutApp-content-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .aboutApp-image-column,
+  .aboutApp-content-column {
+    width: 45%;
+  }
+
+  .aboutApp-content {
+    font-size: 25px;
+  }
+}
+.background_question {
+  background-image: url("./img/landing_page_bg.png");
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.landing_title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-image: url("./img/landing_page_bg.png"); /* Slight transparency */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.questions-table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  font-family: "Rancho";
+  font-size: 20px; /* Transparent background */
+}
+
+.table-cell {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-send {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-send:hover {
+  background-color: #0056b3;
+}
+
+/* Modal styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background_showModal {
+  background-image: url("./img/question_bg.png");
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+}
+.background_show_contruction {
+  background-image: url("./img/planned_bg.png");
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-btn.confirm,
+.btn_close {
+  background-color: #d2b48c;
+  color: white;
+}
+
+.modal-btn.confirm:hover {
+  background-color: #a48b6b;
+}
+
+.modal-btn.cancel {
+  background-color: #7b4f44;
+  color: white;
+}
+
+.modal-btn.cancel:hover {
+  background-color: #3e2723;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-cell {
+    display: block;
+    width: 100%;
+  }
+
+  .questions-table {
+    display: block;
+  }
+}
+.under-construction-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Rancho";
+  font-size: xx-large;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user_span_style {
+  font-family: "Rancho";
+  font-size: xx-large;
+  padding: 20px;
 }

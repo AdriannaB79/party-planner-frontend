@@ -4,8 +4,8 @@ import landingImage from "../img/landingImage.jpeg";
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <div className="row">
-        <img src={landingImage} alt="Landing" className="landing_image" />
+      <div className="row landing_image_container">
+        <img src={landingImage} alt="Landing" className="landing_image " />
       </div>
       <div className="row flex flex-col md:flex-row">
         <div className="column text-left">

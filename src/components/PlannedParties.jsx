@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import firstBackground from "../img/custom_plan_1.png";
 
 export default function PlannedParties({ user }) {
   const [parties, setParties] = useState([]);
-  console.log("USER IN PLANNED PARTIES", user);
+  const [showUnderConstructionMessage, setShowUnderConstructionMessage] =
+    useState(false); // Dodajemy stan
+
   useEffect(() => {
     const fetchPlannedParties = async () => {
       const res = await fetch(
@@ -21,11 +23,17 @@ export default function PlannedParties({ user }) {
     };
     user && fetchPlannedParties();
   }, [user]);
+
   return (
     <div className="planned_parties">
       <h1 className="party-planner-title">Planned parties</h1>
       {parties.map((party) => (
-        <div key={party.id} className="center-content">
+        <div
+          key={party.id}
+          className="center-content"
+          onClick={() => setShowUnderConstructionMessage(true)}
+        >
+          {" "}
           <div
             className="w-1/2 p-4"
             style={{
@@ -37,7 +45,7 @@ export default function PlannedParties({ user }) {
               You choose to organize your{" "}
               <span className="highlight">{party.partyType}</span> party in
               <span className="highlight"></span>{" "}
-              <span className="highlight">{party.city}</span>at/in{" "}
+              <span className="highlight">{party.city}</span> at/in{" "}
               <span className="highlight">{party.location}</span>.
               <br />
               There should be{" "}
@@ -60,6 +68,21 @@ export default function PlannedParties({ user }) {
           </div>
         </div>
       ))}
+      {showUnderConstructionMessage && ( // Dodajemy warunek do wyświetlania komunikatu
+        <div className="under-construction-message background_show_contruction rounded-lg p-6 w-full max-w-md">
+          <p className="text-2xl font-bold mb-4">
+            We are here to work on this for you.
+            <br />
+            We will be back soon!
+          </p>
+          <button
+            className="btn_close"
+            onClick={() => setShowUnderConstructionMessage(false)}
+          >
+            Close
+          </button>
+        </div>
+      )}
     </div>
   );
 }

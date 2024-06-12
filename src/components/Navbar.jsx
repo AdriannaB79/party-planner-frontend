@@ -25,7 +25,7 @@ export default function Navbar({ user, setUser, logo, backgroundImage }) {
               <Link to="/">Plan a Party</Link>
               <Link to="planned-parties">Planned parties</Link>
             </div>
-            <span>{user.email}</span>
+            <span className="user_span_style">{user.email}</span>
             <button onClick={handleClick} className="btn-logout">
               Log out
             </button>
