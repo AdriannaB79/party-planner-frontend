@@ -74,7 +74,7 @@ form.login {
   border: 2px solid black;
   background-color: rgba(179, 174, 174, 0.469);
   backdrop-filter: blur(2px);
-  font-family: "Rancho";
+  font-family: "Rancho", serif;
   font-size: x-large;
 }
 
@@ -114,8 +114,8 @@ form.login {
   border-radius: 9999px;
   color: #fff;
   font-weight: bold;
-  font-family: "Rancho";
-  font-size: x-large;
+  font-family: "Rancho", serif;
+  font-size: xx-large;
   transition: all 0.3s;
   margin: 20px 0;
   text-wrap: nowrap;
@@ -127,8 +127,8 @@ form.login {
   border-radius: 9999px;
   color: navy;
   font-weight: bold;
-  font-size: x-large;
-  font-family: "Rancho";
+  font-size: xx-large;
+  font-family: "Rancho", serif;
 
   transition: all 0.3s;
   margin: 20px 0;
@@ -174,7 +174,7 @@ form.login {
 }
 
 .party-planner-title {
-  font-family: "Rancho";
+  font-family: "Rancho", serif;
   font-size: 100px;
   color: black;
   text-align: center;
@@ -302,7 +302,7 @@ form.login {
 }
 
 .planned_parties {
-  background-image: url("./img/planned_bg.png");
+  background-image: url("./img/planned_bg_1.png");
 
   background: radial-gradient;
   background-size: cover;
@@ -470,7 +470,7 @@ form.login {
   width: 100%;
   margin-bottom: 20px;
   background-color: transparent;
-  font-family: "Rancho";
+  font-family: "Rancho", serif;
   font-size: 20px; /* Transparent background */
 }
 
@@ -525,14 +525,12 @@ form.login {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   flex-grow: 1;
 }
-.background_show_contruction {
-  background-image: url("./img/planned_bg.png");
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  flex-grow: 1;
+.background_show_construction {
+  background-image: url("./img/construction_bg_3.png");
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .modal-btn {
@@ -543,12 +541,22 @@ form.login {
   transition: background-color 0.3s;
 }
 
-.modal-btn.confirm,
-.btn_close {
+.modal-btn.confirm {
   background-color: #d2b48c;
   color: white;
 }
-
+.btn_close {
+  background-color: #aea79b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-family: "Rancho", serif;
+  font-size: xx-large;
+  transition: all 0.3s;
+  margin: 20px 0;
+  text-wrap: nowrap;
+}
 .modal-btn.confirm:hover {
   background-color: #a48b6b;
 }
@@ -574,19 +582,26 @@ form.login {
   }
 }
 .under-construction-message {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Rancho";
+  text-align: center;
+  font-family: "Rancho", serif;
+  color: white;
+  font-style: italic;
   font-size: xx-large;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 1.5;
+  text-decoration: none;
+  text-shadow: 0 5px 10px rgb(1, 1, 110);
 }
 
 .user_span_style {
-  font-family: "Rancho";
+  font-family: "Rancho", serif;
   font-size: xx-large;
   padding: 20px;
 }

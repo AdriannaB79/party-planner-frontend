@@ -14,7 +14,7 @@ import logo from "./img/logo_new.png";
 
 import homeBackground from "./img/landing_page_bg.png";
 import reviewBackground from "./img/Review_bg.png";
-import customPlanBackground from "./img/planned_bg.png";
+import customPlanBackground from "./img/planned_bg_1.png";
 import loginBackground from "./img/LogIn_bg.png";
 import signupBackground from "./img/SignIn_bg.png";
 import aboutBackground from "./img/AboutApp_bg.png";

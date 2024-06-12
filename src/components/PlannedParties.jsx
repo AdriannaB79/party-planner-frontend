@@ -69,11 +69,11 @@ export default function PlannedParties({ user }) {
         </div>
       ))}
       {showUnderConstructionMessage && ( // Dodajemy warunek do wyświetlania komunikatu
-        <div className="under-construction-message background_show_contruction rounded-lg p-6 w-full max-w-md">
-          <p className="text-2xl font-bold mb-4">
-            We are here to work on this for you.
-            <br />
-            We will be back soon!
+        <div className="under-construction-message background_show_construction rounded-lg p-6 w-full max-w-md">
+          <p>
+            Work in progress.
+            <hr />I am gathering all information to help you organize your
+            party!
           </p>
           <button
             className="btn_close"
